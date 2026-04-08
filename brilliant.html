@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: A4; margin: 20mm 25mm; }
+  body { font-family: 'Aptos Display', 'Segoe UI', Calibri, sans-serif; color: #333; line-height: 1.5; }
+  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d9d9d9; padding-bottom: 15px; margin-bottom: 25px; }
+  .brand { color: #1DB954; font-weight: bold; font-size: 14px; }
+  .subtitle { color: #666; font-size: 12px; }
+  h1 { color: #1DB954; font-size: 22px; margin-bottom: 5px; }
+  h2 { color: #1DB954; font-size: 16px; margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+  .stats { display: flex; gap: 30px; margin: 15px 0; }
+  .stat { text-align: center; flex: 1; }
+  .stat-value { font-size: 24px; color: #1DB954; font-weight: bold; }
+  .stat-label { font-size: 11px; color: #666; }
+  .steps { counter-reset: step; }
+  .step { padding: 8px 0; padding-left: 35px; position: relative; }
+  .step::before { counter-increment: step; content: counter(step); position: absolute; left: 0; background: #1DB954; color: white; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  td { padding: 8px 12px; border: 1px solid #eee; font-size: 13px; }
+  td:first-child { font-weight: bold; width: 30%; background: #f8f8f8; }
+  .footer { text-align: center; color: #999; font-size: 11px; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <span class="brand">Stimul8 EdTech Limited</span><br>
+      <span class="subtitle">Partnership Proposal</span>
+    </div>
+  </div>
+  <h1>Stimul8 x Brilliant</h1>
+  <h2>Why This Partnership</h2>
+  <p>Brilliant's interactive STEM learning platform perfectly complements Stimul8's motivation system, creating a powerful combination of rigorous education and gamified rewards that drives deeper engagement. This partnership enables Brilliant to significantly boost user retention and completion rates while providing Stimul8 access to a highly motivated community of learners who thrive on challenging academic content and structured problem-solving.</p>
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step">Children engage with Brilliant's interactive STEM lessons, complete problem-solving challenges, and progress through course modules on Brilliant's platform</div>
+    <div class="step">Stimul8 tracks key learning milestones including lesson completions, problem-solving accuracy, learning streaks, and course progress through Brilliant's API integration</div>
+    <div class="step">Students earn Stimul8 rewards including points, achievement badges, and unlockable content based on their consistent learning engagement and academic progress</div>
+  </div>
+  <h2>The Opportunity</h2>
+  <div class="stats">
+    <div class="stat"><div class="stat-value">$5.4B by 2025</div><div class="stat-label">STEM Learning Market Size</div></div>
+    <div class="stat"><div class="stat-value">40-60%</div><div class="stat-label">Average Course Completion Rate Increase</div></div>
+    <div class="stat"><div class="stat-value">10M+ globally</div><div class="stat-label">Target Brilliant Active Users</div></div>
+  </div>
+  <h2>Next Steps</h2>
+  <table>
+    <tr><td>Technical Integration Planning</td><td>Schedule technical discovery call to map Brilliant's API capabilities and define data sharing protocols for seamless reward tracking</td></tr>
+    <tr><td>Pilot Program Design</td><td>Develop 30-day pilot program with select Brilliant courses to test integration effectiveness and measure engagement improvements</td></tr>
+    <tr><td>Partnership Agreement</td><td>Finalize partnership terms including revenue sharing, user data handling, and co-marketing opportunities for mutual growth</td></tr>
+  </table>
+  <div class="footer">www.stimul8.app</div>
+</body>
+</html>
