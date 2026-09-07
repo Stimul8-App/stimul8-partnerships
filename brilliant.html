@@ -1,56 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stimul8 x Brilliant — Partnership Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  @page { size: A4; margin: 20mm 25mm; }
-  body { font-family: 'Aptos Display', 'Segoe UI', Calibri, sans-serif; color: #333; line-height: 1.5; }
-  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d9d9d9; padding-bottom: 15px; margin-bottom: 25px; }
-  .brand { color: #1DB954; font-weight: bold; font-size: 14px; }
-  .subtitle { color: #666; font-size: 12px; }
-  h1 { color: #1DB954; font-size: 22px; margin-bottom: 5px; }
-  h2 { color: #1DB954; font-size: 16px; margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-  .stats { display: flex; gap: 30px; margin: 15px 0; }
-  .stat { text-align: center; flex: 1; }
-  .stat-value { font-size: 24px; color: #1DB954; font-weight: bold; }
-  .stat-label { font-size: 11px; color: #666; }
-  .steps { counter-reset: step; }
-  .step { padding: 8px 0; padding-left: 35px; position: relative; }
-  .step::before { counter-increment: step; content: counter(step); position: absolute; left: 0; background: #1DB954; color: white; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; font-size: 13px; }
-  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-  td { padding: 8px 12px; border: 1px solid #eee; font-size: 13px; }
-  td:first-child { font-weight: bold; width: 30%; background: #f8f8f8; }
-  .footer { text-align: center; color: #999; font-size: 11px; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; }
+  :root { --green:#3ED87C; --green-dark:#2BC068; --green-light:#E8FBF0; --dark:#030303; --gray:#555; --light-gray:#F7F8FA; --border:#E5E7EB; --white:#ffffff; --radius:15px; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--dark);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .header{display:flex;justify-content:space-between;align-items:center;padding:24px 40px;border-bottom:1px solid var(--border);background:var(--white);}
+  .header-logo{display:flex;align-items:center;gap:12px;}
+  .header-logo span{font-weight:700;font-size:18px;color:var(--dark);}
+  .header-right{text-align:right;color:var(--gray);font-size:14px;}
+  .header-right strong{color:var(--green);font-weight:700;}
+  .hero{padding:60px 40px 40px;max-width:800px;margin:0 auto;text-align:center;}
+  .hero h1{font-size:38px;font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:12px;}
+  .hero h1 span{color:var(--green);}
+  .hero .subtitle{font-size:17px;color:var(--gray);max-width:600px;margin:0 auto;}
+  .content{max-width:800px;margin:0 auto;padding:0 40px 60px;}
+  .section{margin-top:48px;}
+  .section-label{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--green);margin-bottom:12px;}
+  .section h2{font-size:26px;font-weight:800;color:var(--dark);margin-bottom:16px;line-height:1.3;}
+  .section p{font-size:15px;color:var(--gray);line-height:1.7;}
+  .gains-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:var(--radius);overflow:hidden;margin-top:20px;box-shadow:0 1px 3px rgba(0,0,0,0.06);}
+  .gains-table th{background:var(--green);color:var(--white);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;padding:14px 20px;text-align:left;}
+  .gains-table td{padding:14px 20px;font-size:14px;color:var(--dark);border-bottom:1px solid var(--border);}
+  .gains-table tr:nth-child(even) td{background:var(--light-gray);}
+  .gains-table tr:last-child td{border-bottom:none;}
+  .steps{display:flex;flex-direction:column;gap:20px;margin-top:20px;}
+  .step{display:flex;gap:16px;align-items:flex-start;}
+  .step-number{flex-shrink:0;width:36px;height:36px;background:var(--green);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;}
+  .step-text{font-size:15px;color:var(--gray);line-height:1.6;padding-top:6px;}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px;}
+  .stat-card{background:var(--green-light);border-radius:var(--radius);padding:24px;text-align:center;border:1px solid rgba(62,216,124,0.2);}
+  .stat-value{font-size:32px;font-weight:800;color:var(--green);line-height:1.2;}
+  .stat-label{font-size:13px;color:var(--gray);margin-top:6px;line-height:1.4;}
+  .next-steps{display:flex;flex-direction:column;gap:12px;margin-top:20px;}
+  .next-step-row{display:flex;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06);}
+  .next-step-label{background:var(--green);color:var(--white);font-weight:600;font-size:13px;padding:16px 20px;min-width:180px;display:flex;align-items:center;}
+  .next-step-desc{background:var(--light-gray);padding:16px 20px;font-size:14px;color:var(--gray);flex:1;display:flex;align-items:center;}
+  .cta-section{text-align:center;margin-top:56px;padding:40px;background:var(--green-light);border-radius:var(--radius);}
+  .cta-section h3{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:8px;}
+  .cta-section p{font-size:15px;color:var(--gray);margin-bottom:24px;}
+  .cta-button{display:inline-block;background:var(--green);color:var(--white);font-weight:700;font-size:16px;padding:14px 32px;border-radius:var(--radius);text-decoration:none;transition:background 0.2s;}
+  .cta-button:hover{background:var(--green-dark);}
+  .footer{text-align:center;padding:32px 40px;border-top:1px solid var(--border);margin-top:60px;}
+  .footer-tagline{font-size:16px;font-weight:700;color:var(--green);margin-bottom:8px;}
+  .footer-info{font-size:13px;color:#999;}
+  .footer-info a{color:var(--green);text-decoration:none;}
+  @media (max-width:640px){.header{padding:16px 20px;}.hero{padding:40px 20px 20px;}.hero h1{font-size:28px;}.content{padding:0 20px 40px;}.section{margin-top:36px;}.section h2{font-size:22px;}.stats-grid{grid-template-columns:1fr;}.next-step-row{flex-direction:column;}.next-step-label{min-width:unset;}.gains-table th,.gains-table td{padding:10px 14px;font-size:13px;}}
 </style>
 </head>
 <body>
   <div class="header">
-    <div>
-      <span class="brand">Stimul8 EdTech Limited</span><br>
-      <span class="subtitle">Partnership Proposal</span>
+    <div class="header-logo"><span>Stimul8</span></div>
+    <div class="header-right"><strong>Stimul8 EdTech Limited</strong><br>Partnership Proposal</div>
+  </div>
+  <div class="hero">
+    <h1>Stimul8 x <span>Brilliant</span></h1>
+    <p class="subtitle">Rigorous STEM learning meets powerful motivation—unlock deeper engagement</p>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div class="section-label">Why This Partnership</div>
+      <p>Brilliant's interactive problem-solving courses drive deep learning, but completion rates drop without sustained motivation. Stimul8's reward system keeps learners coming back. Together, you increase retention and time-on-platform, while Stimul8 gains access to families actively investing in quality STEM education.</p>
+      <table class="gains-table">
+        <thead><tr><th>What Brilliant Gains</th><th>What Stimul8 Gains</th></tr></thead>
+        <tbody><tr><td>Higher completion rates and session duration</td><td>Access to engaged learners pursuing rigorous STEM</td></tr>
+<tr><td>Stronger parent-child learning partnership</td><td>Family-centric engagement model with real motivation</td></tr>
+<tr><td>Proof that external rewards drive completion</td><td>Integration with trusted premium education brand</td></tr>
+<tr><td>Data on which courses drive highest engagement</td><td>Insights into high-value learning pathways</td></tr></tbody>
+      </table>
+    </div>
+    <div class="section">
+      <div class="section-label">How It Works</div>
+      <h2>Simple to connect. Powerful results.</h2>
+      <div class="steps"><div class="step"><div class="step-number">1</div><div class="step-text">A child completes a Brilliant course, problem set, or skill challenge and submits their work for verification on Brilliant</div></div>
+<div class="step"><div class="step-number">2</div><div class="step-text">Completion is confirmed—automatically through a direct integration, or by a parent confirming in Stimul8—and instantly passes to Stimul8</div></div>
+<div class="step"><div class="step-number">3</div><div class="step-text">The reward the parent set triggers immediately, and the child earns points or unlocks a prize they chose</div></div></div>
+    </div>
+    <div class="section">
+      <div class="section-label">The Opportunity</div>
+      <div class="stats-grid"><div class="stat-card"><div class="stat-value">500K+</div><div class="stat-label">Active monthly learners</div></div>
+<div class="stat-card"><div class="stat-value">150+</div><div class="stat-label">Interactive courses and problem sets</div></div>
+<div class="stat-card"><div class="stat-value">195</div><div class="stat-label">Countries and territories served</div></div></div>
+    </div>
+    <div class="section">
+      <div class="section-label">Next Steps</div>
+      <h2>Let's explore this together</h2>
+      <div class="next-steps"><div class="next-step-row"><div class="next-step-label">Connecting Progress</div><div class="next-step-desc">Agree how course completions pass from Brilliant to Stimul8. Start with parent confirmation in Stimul8, then design a direct technical integration together</div></div>
+<div class="next-step-row"><div class="next-step-label">Pilot Program</div><div class="next-step-desc">Launch with 500–1,000 families. Measure retention lift on Brilliant, reward redemption rates, and parent satisfaction over 8–12 weeks</div></div>
+<div class="next-step-row"><div class="next-step-label">Partnership Agreement</div><div class="next-step-desc">Define data sharing (activity types, completion events, no PII), revenue share or licensing model, and go-live roadmap</div></div></div>
+    </div>
+    <div class="cta-section">
+      <h3>Ready to build something families love?</h3>
+      <p>Let's schedule a quick call to explore how we can work together.</p>
+      <a href="mailto:jendi@stimul8.app?subject=Re: Stimul8 x Brilliant Partnership" class="cta-button">Let's Talk →</a>
     </div>
   </div>
-  <h1>Stimul8 x Brilliant</h1>
-  <h2>Why This Partnership</h2>
-  <p>Brilliant's interactive STEM learning platform perfectly complements Stimul8's motivation system, creating a powerful combination of rigorous education and gamified rewards that drives deeper engagement. This partnership enables Brilliant to significantly boost user retention and completion rates while providing Stimul8 access to a highly motivated community of learners who thrive on challenging academic content and structured problem-solving.</p>
-  <h2>How It Works</h2>
-  <div class="steps">
-    <div class="step">Children engage with Brilliant's interactive STEM lessons, complete problem-solving challenges, and progress through course modules on Brilliant's platform</div>
-    <div class="step">Stimul8 tracks key learning milestones including lesson completions, problem-solving accuracy, learning streaks, and course progress through Brilliant's API integration</div>
-    <div class="step">Students earn Stimul8 rewards including points, achievement badges, and unlockable content based on their consistent learning engagement and academic progress</div>
+  <div class="footer">
+    <div class="footer-tagline">Let's build something families love, together.</div>
+    <div class="footer-info">Stimul8 EdTech Limited · <a href="https://stimul8.app">www.stimul8.app</a> · Confidential</div>
   </div>
-  <h2>The Opportunity</h2>
-  <div class="stats">
-    <div class="stat"><div class="stat-value">$5.4B by 2025</div><div class="stat-label">STEM Learning Market Size</div></div>
-    <div class="stat"><div class="stat-value">40-60%</div><div class="stat-label">Average Course Completion Rate Increase</div></div>
-    <div class="stat"><div class="stat-value">10M+ globally</div><div class="stat-label">Target Brilliant Active Users</div></div>
-  </div>
-  <h2>Next Steps</h2>
-  <table>
-    <tr><td>Technical Integration Planning</td><td>Schedule technical discovery call to map Brilliant's API capabilities and define data sharing protocols for seamless reward tracking</td></tr>
-    <tr><td>Pilot Program Design</td><td>Develop 30-day pilot program with select Brilliant courses to test integration effectiveness and measure engagement improvements</td></tr>
-    <tr><td>Partnership Agreement</td><td>Finalize partnership terms including revenue sharing, user data handling, and co-marketing opportunities for mutual growth</td></tr>
-  </table>
-  <div class="footer">www.stimul8.app</div>
 </body>
 </html>
